@@ -17,5 +17,18 @@ def convert_images_to_png():
         # Optionally, you can delete the original image file if needed
         # os.remove(image_path)
 
-if __name__ == "__main__":
-    convert_images_to_png()
+def convert_png_to_jpg():
+    current_folder = os.getcwd()
+    png_files = [f for f in os.listdir(current_folder) if os.path.isfile(os.path.join(current_folder, f)) and f.lower().endswith('.png')]
+
+    for png_file in png_files:
+        # Open the PNG image
+        png_path = os.path.join(current_folder, png_file)
+        img = Image.open(png_path)
+
+        # Convert and save as JPG
+        jpg_path = os.path.splitext(png_path)[0] + ".jpg"
+        img.convert("RGB").save(jpg_path, "JPEG")
+
+        # Optionally, you can delete the original PNG image file if needed
+        # os.remove(png_path)
