@@ -20,16 +20,16 @@ def convert_and_rename_images(input_dir, output_dir):
         input_path = os.path.join(input_dir, file_name)
 
         # Check if the file is an image (you may want to add more file format checks)
-        if os.path.isfile(input_path) and not file_name.lower().endswith('.png'):
+        if os.path.isfile(input_path) and not file_name.lower().endswith(('.png', '.jpg')):
             # Open the image using Pillow
             img = Image.open(input_path)
 
-            # Construct the full path of the output file with a new name and .png extension
-            output_name = f"image_{counter}.png"
+            # Construct the full path of the output file with a new name and .jpg extension
+            output_name = f"image_{counter}.jpg"
             output_path = os.path.join(output_dir, output_name)
 
-            # Save the image in PNG format
-            img.save(output_path, format='PNG')
+            # Save the image in JPG format
+            img.save(output_path, format='JPEG')
 
             # Increment the counter for the next image
             counter += 1
