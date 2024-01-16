@@ -1,1 +1,1 @@
-!wget --no-check-certificate "https://drive.google.com/uc?export=download&id={id}" -O file_name
+!wget --no-check-certificate "https://drive.usercontent.google.com/download?id=id&export=download&authuser=0&confirm=t&uuid=2f74282a-cc8c-4ed3-b3a1-f94b0aa3dc33&at=APZUnTVJQ_FLKB3tzYhcLfd4IIXR%3A1705423911696" -O best.pt 
