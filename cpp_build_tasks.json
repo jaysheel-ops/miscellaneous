@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build and run",
+            "type": "shell",
+            "command": "",  // Update this path based on your system
+            "args": [
+                "g++",
+                "${file}",
+                "&&",
+                "a.exe",
+                "<",
+                "input.txt",
+                ">",
+                "output.txt"
+
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
